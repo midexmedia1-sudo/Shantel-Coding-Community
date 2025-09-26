@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Services | Shantel Coding</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Header -->
+  <header>
+    <nav>
+      <div class="logo">Shantel Coding</div>
+      <div class="hamburger" onclick="document.querySelector('.nav-links').classList.toggle('show')">
+        <span></span><span></span><span></span>
+      </div>
+      <div class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="services.html" class="active">Services</a>
+        <a href="gallery.html">Gallery</a>
+        <a href="contact.html">Contact</a>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="services-hero">
+    <h1>Our World-Class Services</h1>
+    <p>
+      At <strong>Shantel Coding Community</strong>, we provide innovative, practical, and empowering solutions 
+      designed to help individuals, startups, and organizations thrive in today’s digital era.  
+      From learning spaces to business incubators, we create an ecosystem where technology, creativity, and collaboration flourish.
+    </p>
+  </section>
+
+  <!-- Services Section -->
+  <section class="services">
+    <h2>What We Offer</h2>
+    <p class="intro">
+      Our services go beyond facilities — we deliver value, impact, and opportunities that shape future leaders in technology and business.  
+      Explore our tailored services below:
+    </p>
+
+    <div class="services-grid">
+      <div class="service-card fade-in">
+        <span class="icon">🍲</span>
+        <h3>Yummy Express</h3>
+        <p>Delicious local and continental meals, freshly prepared to keep you energized while you innovate, collaborate, and learn.</p>
+      </div>
+      <div class="service-card fade-in">
+        <span class="icon">🏛️</span>
+        <h3>Event Hall & Conference Center</h3>
+        <p>Host impactful events, professional conferences, and interactive workshops in our modern and well-equipped halls.</p>
+      </div>
+      <div class="service-card fade-in">
+        <span class="icon">🎬</span>
+        <h3>Creative Media Studio</h3>
+        <p>A professional space for photography, videography, and content creation — designed for entrepreneurs, influencers, and creatives.</p>
+      </div>
+      <div class="service-card fade-in">
+        <span class="icon">💻</span>
+        <h3>Co-Working Hub</h3>
+        <p>Work smarter in a collaborative environment with fast internet, private desks, and networking opportunities for freelancers and startups.</p>
+      </div>
+      <div class="service-card fade-in">
+        <span class="icon">🚀</span>
+        <h3>Startup Incubation</h3>
+        <p>Accelerate your ideas with access to mentorship, business development tools, and an ecosystem built for innovation and growth.</p>
+      </div>
+      <div class="service-card fade-in">
+        <span class="icon">📚</span>
+        <h3>Digital Skills Academy</h3>
+        <p>Hands-on training in coding, UI/UX design, AI, and entrepreneurship — preparing the next generation of digital leaders.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Why Choose Us -->
+  <section class="why-us">
+    <h2>Why Choose Shantel Coding?</h2>
+    <ul>
+      <li>✔ State-of-the-art facilities tailored for productivity and growth.</li>
+      <li>✔ Experienced trainers, mentors, and industry experts.</li>
+      <li>✔ Vibrant community of innovators, entrepreneurs, and creators.</li>
+      <li>✔ Affordable, flexible, and impactful services designed for success.</li>
+    </ul>
+  </section>
+
+  <!-- Call to Action -->
+  <section class="cta">
+    <h2>Transform Your Ideas Into Reality</h2>
+    <p>Let’s help you unlock opportunities with the right environment, mentorship, and resources. Together, we build the future.</p>
+    <a href="contact.html" class="btn">Get Started Today</a>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 Shantel Coding Community. All rights reserved.</p>
+  </footer>
+
+  <!-- Small Animation Script -->
+  <script>
+    const cards = document.querySelectorAll('.fade-in');
+    const options = { threshold: 0.2 };
+
+    const observer = new IntersectionObserver((entries, observer) => {
+      entries.forEach(entry => {
+        if(entry.isIntersecting){
+          entry.target.classList.add('show');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, options);
+
+    cards.forEach(card => observer.observe(card));
+  </script>
+</body>
+</html>

@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Shantel Coding Community | Empowering Digital Leaders</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    /* Example gradient + animation tweaks */
+    .hero {
+      background: linear-gradient(135deg, #4facfe, #00f2fe);
+      color: #fff;
+      text-align: center;
+      padding: 100px 20px;
+      position: relative;
+      overflow: hidden;
+    }
+    .hero h1 {
+      font-size: 3rem;
+      margin-bottom: 20px;
+      animation: fadeDown 1s ease-in-out;
+    }
+    .hero p {
+      font-size: 1.2rem;
+      margin-bottom: 30px;
+      animation: fadeUp 1.5s ease-in-out;
+    }
+    .hero .btn {
+      background: #fff;
+      color: #0077b6;
+      padding: 12px 25px;
+      border-radius: 5px;
+      text-decoration: none;
+      font-weight: bold;
+      transition: 0.3s;
+    }
+    .hero .btn:hover {
+      background: #0077b6;
+      color: #fff;
+    }
+    @keyframes fadeDown { from {opacity:0; transform:translateY(-30px);} to {opacity:1; transform:translateY(0);} }
+    @keyframes fadeUp { from {opacity:0; transform:translateY(30px);} to {opacity:1; transform:translateY(0);} }
+
+    /* Section styles */
+    section { padding: 80px 20px; text-align: center; }
+    .about-preview, .services-preview, .gallery-preview { max-width: 1000px; margin: 0 auto; }
+    .cards { display: grid; grid-template-columns: repeat(auto-fit,minmax(250px,1fr)); gap: 20px; }
+    .card {
+      background: #fff;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+      transition: transform 0.4s;
+      animation: fadeIn 1.5s ease-in-out;
+    }
+    .card:hover { transform: translateY(-10px); }
+    .card img { width: 100%; border-radius: 8px; margin-bottom: 15px; }
+
+    @keyframes fadeIn { from {opacity:0; transform:scale(0.95);} to {opacity:1; transform:scale(1);} }
+
+    .cta {
+      background: linear-gradient(135deg, #00c6ff, #0072ff);
+      color: #fff;
+      padding: 60px 20px;
+      text-align: center;
+    }
+    .cta .btn { background:#fff; color:#0072ff; padding:12px 25px; border-radius:5px; text-decoration:none; font-weight:bold; }
+    .cta .btn:hover { background:#0072ff; color:#fff; }
+  </style>
+</head>
+<body>
+  <!-- Header -->
+  <header>
+    <nav>
+      <div class="logo">Shantel Coding</div>
+      <div class="hamburger" onclick="document.querySelector('.nav-links').classList.toggle('show')">
+        <span></span><span></span><span></span>
+      </div>
+      <div class="nav-links">
+        <a href="index.html" class="active">Home</a>
+        <a href="about.html">About</a>
+        <a href="services.html">Services</a>
+        <a href="gallery.html">Gallery</a>
+        <a href="contact.html">Contact</a>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <h1>Welcome to Shantel Coding Community</h1>
+    <p>Empowering the next generation of digital leaders through training, innovation, and collaboration.</p>
+    <a href="contact.html" class="btn">Join Us Today</a>
+  </section>
+
+  <!-- About Preview -->
+  <section class="about-preview">
+    <h2>Who We Are</h2>
+    <p>Shantel Coding Community is more than a tech hub — it’s a family of innovators, entrepreneurs, and learners. We provide world-class digital skills training, modern co-working spaces, startup incubation, and community events to inspire growth and leadership.</p>
+    <a href="about.html" class="btn">Learn More</a>
+  </section>
+
+  <!-- Services Preview -->
+  <section class="services-preview">
+    <h2>Our Core Services</h2>
+    <div class="cards">
+      <div class="card">
+        <img src="service1.jpg" alt="Digital Skills Training">
+        <h3>Digital Skills Academy</h3>
+        <p>Practical hands-on training in coding, AI, design, and entrepreneurship.</p>
+      </div>
+      <div class="card">
+        <img src="service2.jpg" alt="Co-working Hub">
+        <h3>Co-Working Hub</h3>
+        <p>Flexible spaces for freelancers, startups, and innovators to thrive.</p>
+      </div>
+      <div class="card">
+        <img src="service3.jpg" alt="Startup Incubator">
+        <h3>Startup Incubator</h3>
+        <p>Mentorship, resources, and an ecosystem for turning ideas into impact.</p>
+      </div>
+    </div>
+    <a href="services.html" class="btn">Explore All Services</a>
+  </section>
+
+  <!-- Gallery Preview -->
+  <section class="gallery-preview">
+    <h2>Community in Action</h2>
+    <div class="cards">
+      <div class="card"><img src="SAM1.png" alt="Workshop"><p>Interactive coding workshops.</p></div>
+      <div class="card"><img src="SAM2.png" alt="Community"><p>Vibrant community events.</p></div>
+      <div class="card"><img src="SAM3.webp" alt="Hackathon"><p>Hackathons that spark innovation.</p></div>
+    </div>
+    <a href="gallery.html" class="btn">View More Moments</a>
+  </section>
+
+  <!-- Testimonials -->
+  <section class="testimonials">
+    <h2>What Our Members Say</h2>
+    <p>"Shantel Coding gave me the tools and confidence to start my tech career. The community is welcoming and inspiring!"</p>
+    <p>– Ada, Graduate</p>
+  </section>
+
+  <!-- Call To Action -->
+  <section class="cta">
+    <h2>Be Part of Our Journey</h2>
+    <p>Join us today and take your first step into a world of innovation, collaboration, and limitless opportunities.</p>
+    <a href="contact.html" class="btn">Get Started</a>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 Shantel Coding Community. All rights reserved.</p>
+  </footer>
+</body>
+</html>
